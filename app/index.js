@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 const fileTransformed = './data/data_transformed.txt';
-const tools      = require('./tools');
+const tools      = require('../tools');
 const limit      = 100;    
 
 var arrayOrigin      = tools.fileToArray(fileTransformed);
