@@ -12,12 +12,13 @@ var arrayOrigin      = tools.fileToArray(fileTransformed);
 app.use(cors())
 
 app.get('/', (req, res) => {
-    const page = parseInt(req.query.page);
+    let page;
+    if (req.query.page == undefined) { page = 1 } else {  page = parseInt(req.query.page); }
     if (page > 0)  {
         start = (page - 1) * limit;
         end    = start + limit;
         var array = arrayOrigin.slice(start, end);
-        return res.json({numbers: array})
+        return res.json({numbers: array});
     }
 });
 
