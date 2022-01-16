@@ -4,7 +4,8 @@ const app = express();
 const axios = require('axios');
 const fileTransformed = './data/data_transformed.txt';
 const tools      = require('../tools');
-const limit      = 100;    
+const limit      = 100;   
+const PORT = process.env.PORT || 8091; 
 
 var arrayOrigin      = tools.fileToArray(fileTransformed);
 
@@ -22,4 +23,4 @@ app.get('/', (req, res) => {
     }
 });
 
-app.listen('8091');
+app.listen(PORT);
