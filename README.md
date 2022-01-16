@@ -58,7 +58,7 @@ Para a execução em base local, é necessário executar o comando:
 
 
 
-Fiz uma publicação no Heroku:  https://ronaldo-cross-api.herokuapp.com/?page=1
+Fiz uma publicação no Heroku:  https://ronaldo-cross-api.herokuapp.com/numbers?page=1
 
 
 

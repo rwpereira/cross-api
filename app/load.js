@@ -12,7 +12,7 @@ var arrayOrigin      = tools.fileToArray(fileTransformed);
 
 app.use(cors())
 
-app.get('/', (req, res) => {
+app.get('/numbers', (req, res) => {
     let page;
     if (req.query.page == undefined) { page = 1 } else {  page = parseInt(req.query.page); }
     if (page > 0)  {
